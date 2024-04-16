@@ -1,8 +1,8 @@
 {
-  "name": "extensions-default",
+  "name": "theblank-extension",
   "version": "1.0.0",
-  "repositoryName": "Default Extensions",
-  "description": "Default extensions for Paperback 0.8",
+  "repositoryName": "TheBlank Extension",
+  "description": "TheBlank Extension for Paperback 0.8",
   "main": "lib/index.js",
   "scripts": {
     "test": "npx paperback test",
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/Paperback-iOS/extensions"
   },
-  "author": "Paperback",
+  "author": "Red",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/Paperback-iOS/extensions/issues"
@@ -29,7 +29,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
-    "@paperback/toolchain": "0.8.0-alpha.47",
-    "@paperback/types": "0.8.0-alpha.47"
+    "@paperback/toolchain": "1.0.0-alpha.13",
+    "@paperback/types": "1.0.0-alpha.13"
   }
 }

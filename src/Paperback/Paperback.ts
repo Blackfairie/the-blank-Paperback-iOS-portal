@@ -311,19 +311,6 @@ export class Paperback extends Source {
                 pages.push(`${komgaAPI}/books/${chapterId}/pages/${page.number}?convert=png`)
             }
         }
-        // Determine the preferred reading direction which is only available in the serie metadata
-        const serieRequest = App.createRequest({
-            url: `${komgaAPI}/series/${mangaId}`,
-            method: 'GET'
-        })
-        const serieResponse = await this.requestManager.schedule(serieRequest, 1)
-        const serieResult = typeof serieResponse.data === 'string'
-            ? JSON.parse(serieResponse.data)
-            : serieResponse.data
-        let longStrip = false
-        if (['VERTICAL', 'WEBTOON'].includes(serieResult.metadata.readingDirection)) {
-            longStrip = true
-        }
         return App.createChapterDetails({
             id: chapterId,
             mangaId: mangaId,
